@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head.html" . }}
+
+  <body>
+    {{ partial "nav.html" . }}
+
+    <main id="main">
+      <!-- ======= imprint Section ======= -->
+      {{ partial "imprint/index.html" . }}
+    </main>
+    <!-- End #main -->
+    {{ partial "footer.html" . }}
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    {{ partial "script.html" . }}
+  </body>
+</html>
