@@ -1,18 +1,27 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+:root {
+  --primary-color: #b53400;
+  --secondary-color: #092233;
+  --color-light: #fff;
+  --color-light-2: #ffe2d6;
+  --dark-nav-bg: url(../img/nav-bg.png);
+  --dark-hero-bg: url("../img/hero-bg.jpg") top center;
+  /*
+  --primary-color: #b53400;
+  --secondary-color: #dfeef8;
+  --color-light: #092233;
+  --color-light-2: #ffe2d6;
+  --dark-nav-bg: url(/assets/img/nav-bg-light.png);
+  --dark-hero-bg: url("../img/hero-bg-light.png") top center; */
+}
 body {
   font-family: "Lato", sans-serif;
-  color: #272829;
 }
 
 a {
-  color: #b53400;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #37b3ed;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
@@ -24,7 +33,9 @@ h5,
 h6 {
   font-family: "Lato", sans-serif;
 }
-
+.color-1 {
+  color: var(--color-light);
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -35,7 +46,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #b53400;
+  background: var(--primary-color);
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -43,12 +54,12 @@ h6 {
 }
 .back-to-top i {
   font-size: 28px;
-  color: #fff;
+  color: var(--color-light);
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #2eafec;
-  color: #fff;
+  background: var(--primary-color);
+  color: var(--color-light);
 }
 .back-to-top.active {
   visibility: visible;
@@ -68,7 +79,7 @@ h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: url(/assets/img/nav-bg.png);
+  background: var(--dark-nav-bg);
   background-size: cover;
   overflow-y: auto;
 }
@@ -88,19 +99,19 @@ h6 {
 }
 #header .profile h1 a,
 #header .profile h1 a:hover {
-  color: #fff;
+  color: var(--color-light);
   text-decoration: none;
 }
 #header .profile .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: #fff;
+  color: var(--color-light);
   line-height: 1;
   text-align: center;
   transition: 0.3s;
 }
 #header .profile .social-links a:hover {
-  color: #b53400;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
@@ -134,7 +145,6 @@ h6 {
   white-space: nowrap;
 }
 .navbar {
-  margin-top: 30px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -151,7 +161,7 @@ h6 {
 .nav-menu a:focus {
   display: flex;
   align-items: center;
-  color: #fff;
+  color: var(--color-light);
   padding: 0px 15px;
   margin-bottom: 20px;
   transition: 0.3s;
@@ -169,8 +179,8 @@ h6 {
   font-size: 22px;
   text-align: center;
   text-decoration: none;
-  color: #fff;
-  border-bottom: #b53400 3px solid;
+  color: var(--color-light);
+  border-bottom: var(--primary-color) 3px solid;
 }
 
 /* Mobile Navigation */
@@ -183,8 +193,8 @@ h6 {
   font-size: 24px;
   transition: all 0.4s;
   outline: none !important;
-  background-color: #b53400;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--color-light);
   width: 40px;
   height: 40px;
   display: inline-flex;
@@ -208,19 +218,10 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: var(--dark-hero-bg);
   background-size: cover;
 }
-#hero:before {
-  content: "";
-  background: rgba(5, 13, 24, 0.3);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
+
 #hero .hero-container {
   position: relative;
   z-index: 2;
@@ -231,20 +232,20 @@ h6 {
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
-  color: #fff;
+  color: var(--color-light);
 }
 #hero p {
-  color: #b53400;
+  color: var(--primary-color);
   margin-bottom: 50px;
   font-size: 32px;
   font-family: "Lato", sans-serif;
   font-weight: bold;
 }
 #hero p span {
-  color: #b53400;
+  color: var(--primary-color);
   padding-bottom: 4px;
   letter-spacing: 1px;
-  border-bottom: 3px solid #b53400;
+  border-bottom: 3px solid var(--primary-color);
 }
 @media (min-width: 1024px) {
   #hero {
@@ -271,10 +272,6 @@ section {
   overflow: hidden;
 }
 
-.section-bg {
-  background: #f5f8fd;
-}
-
 .section-title {
   padding-bottom: 30px;
 }
@@ -284,7 +281,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #fff;
+  color: var(--color-light);
 }
 .section-title h2::after {
   content: "";
@@ -292,18 +289,18 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #b53400;
+  background: var(--primary-color);
   bottom: 0;
   left: 0;
 }
 .section-title p {
   margin-bottom: 0;
-  color: #fff;
+  color: var(--color-light);
   margin-left: 20px;
   padding-bottom: 15px;
 }
 .text-darknes {
-  color: #b53400 !important;
+  color: var(--primary-color) !important;
 }
 
 /*--------------------------------------------------------------
@@ -311,7 +308,7 @@ section {
 --------------------------------------------------------------*/
 .who-am-i {
   padding-bottom: 30px;
-  background-color: #092233;
+  background-color: var(--secondary-color);
 }
 .who-am-i img {
   width: 100%;
@@ -323,21 +320,21 @@ section {
 --------------------------------------------------------------*/
 .contact {
   padding-bottom: 130px;
-  background-color: #092233;
+  background-color: var(--secondary-color);
 }
 .contact .info {
   padding: 30px;
-  background: #092233;
+  background: var(--secondary-color);
   width: 100%;
-  border: #b53400 1px solid;
+  border: var(--primary-color) 1px solid;
 }
 .contact .info i {
   font-size: 20px;
-  color: #b53400;
+  color: var(--primary-color);
   float: left;
   width: 44px;
   height: 44px;
-  background: #ffe2d6;
+  background: var(--color-light-2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -349,64 +346,26 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #b53400;
+  color: var(--primary-color);
 }
 .contact .info p {
   padding: 0 0 10px 60px;
   margin-bottom: 20px;
   font-size: 14px;
-  color: #fff;
+  color: var(--color-light);
 }
 .contact .info .email p {
   padding-top: 5px;
 }
+.contact .info .email a,
+.contact .info .phone a {
+  color: var(--color-light-2);
+}
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #b53400;
-  color: #fff;
-}
-.contact .php-email-form {
-  width: 100%;
-  padding: 30px;
-  background: #092233;
-  border: #b53400 1px solid;
-}
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-
-.contact .php-email-form .form-group {
-  margin-bottom: 15px;
-}
-.contact .php-email-form label {
-  padding-bottom: 8px;
-  color: #fff;
-}
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  background-color: #092233;
-  border: #b53400 1px solid;
-}
-.contact .php-email-form input {
-  height: 44px;
-}
-.contact .php-email-form textarea {
-  padding: 10px 15px;
-}
-.contact .php-email-form button[type="submit"] {
-  background: #b53400;
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-.contact .php-email-form button[type="submit"]:hover {
-  background: #b53400;
+  background: var(--primary-color);
+  color: var(--color-light);
 }
 @-webkit-keyframes animate-loading {
   0% {
@@ -430,7 +389,7 @@ section {
 --------------------------------------------------------------*/
 #footer {
   padding: 15px;
-  color: #f4f6fd;
+  color: var(--color-light);
   font-size: 14px;
   position: fixed;
   left: 0;
@@ -445,7 +404,7 @@ section {
   padding-top: 5px;
   text-align: center;
   font-size: 13px;
-  color: #eaebf0;
+  color: var(--color-light);
 }
 @media (max-width: 1199px) {
   #footer {
@@ -453,4 +412,13 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
+}
+
+#icon {
+  width: 30px !important;
+  cursor: pointer;
+}
+
+.full-height {
+  height: 100vh !important;
 }
