@@ -8,13 +8,15 @@
   --color-light-2: #ffe2d6;
   --dark-nav-bg: url(../img/nav-bg.png);
   --dark-hero-bg: url("../img/hero-bg.jpg") top center;
-  /*
+}
+
+.light-theme {
   --primary-color: #b53400;
   --secondary-color: #dfeef8;
   --color-light: #092233;
-  --color-light-2: #ffe2d6;
+  --color-light-2: #f17540;
   --dark-nav-bg: url(/assets/img/nav-bg-light.png);
-  --dark-hero-bg: url("../img/hero-bg-light.png") top center; */
+  --dark-hero-bg: url("../img/hero-bg-light.png") top center;
 }
 body {
   font-family: "Lato", sans-serif;
